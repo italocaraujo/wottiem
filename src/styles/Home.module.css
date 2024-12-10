@@ -1,0 +1,40 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btnLinkMusic {
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  display: inline-block;
+  border: 1px solid #000;
+  background: transparent;
+  padding: 0;
+  height: 34px;
+  line-height: 33px !important;
+  width: 120px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.btnLinkMusic:hover {
+  cursor: pointer;
+  -webkit-transition: .2s ease color, .2s ease;
+  transition: .2s ease color, .2s ease;
+  outline: 0;
+  background-color: #000;
+
+  a {
+    color: #ffffff;
+  }
+}
+
+
+.footer {
+  text-align: center;
+  margin: 0 auto;
+  padding: 2em 20px 3em;
+}

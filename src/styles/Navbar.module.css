@@ -1,0 +1,139 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  width: 100vw;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.leftLink,
+.rightLink {
+  font-size: 1rem;
+  opacity: 0.5;
+  padding: 1.333rem;
+  line-height: 1.44rem;
+}
+
+.leftLink:hover,
+.rightLink:hover {
+  opacity: 1;
+}
+
+.center {
+  display: flex;
+  gap: 20px;
+  font-size: 1rem;
+}
+
+.center a {
+  display: flex;
+  opacity: 0.5;
+  padding: 1.333rem;
+  line-height: 1.44rem;
+}
+
+.center a:hover {
+  opacity: 1;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Sidebar inicialmente fora da tela */
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transform: translateX(-100%); /* Inicialmente fora da tela */
+  transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+.sidebar.open {
+  left: 0; /* Move a sidebar para dentro da tela */
+  transform: translateX(0); /* Move a sidebar para dentro da tela */
+  animation: slideIn 0.4s forwards; /* Entrando na tela */
+}
+
+
+.sidebar.closing {
+  transform: translateX(-100%);
+  animation: slideOut 0.4s forwards; /* Saindo da tela */
+}
+
+.sidebar a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 1.125rem;
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid #ddd;
+  display: flex;
+  align-items: self-start;
+}
+
+.divCloseBtn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.closeBtn {
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro */
+  z-index: 999;
+  display: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.overlay.active {
+  display: block; /* Mostra o overlay quando o menu está aberto */
+}
+
+@media screen and (max-width: 768px) {
+  .center {
+    display: none; /* Oculta os links centrais no desktop */
+  }
+
+  .hamburger {
+    display: flex; /* Mostra o botão hamburger */
+    opacity: 0.5;
+  }
+
+  .sidebar {
+    z-index: 1001;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}

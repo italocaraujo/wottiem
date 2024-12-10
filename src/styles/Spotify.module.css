@@ -1,0 +1,22 @@
+.spotifyEmbed {
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+    max-width: 550px; /* Define um tamanho máximo */
+}
+
+#embed-iframe {
+    height: 80px;
+    border-radius: 8px;
+    margin: 40px;
+}
+
+@media (max-width: 480px) {
+    .spotifyEmbed {
+        max-width: 100%; /* Define um tamanho máximo */
+    }
+}
+  

@@ -1,0 +1,56 @@
+#title {
+    font-size: 16px;
+    line-height: 29px;
+    margin: 0 auto 3px;
+    font-weight: 400;
+}
+
+#subtitle {
+    line-height: 1.8;
+    font-size: 12px;
+}
+
+#shirtImg {
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none;
+    display: block;
+    max-width: 480px;
+    margin: 0 auto;
+    float: none;
+    display: block;
+    width: 100%; /* A largura é 100% do container */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.btnLink {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+    border: 1px solid #000;
+    background: transparent;
+    padding: 0;
+    height: 34px;
+    line-height: 33px !important;
+    width: 120px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.btnLink:hover {
+    cursor: pointer;
+    -webkit-transition: .2s ease color, .2s ease;
+    transition: .2s ease color, .2s ease;
+    outline: 0;
+    background-color: #000;
+    color: #ffffff;
+}
+
+.tshirt {
+    width: 100%;
+    position: relative;
+    letter-spacing: .03em;
+    margin-bottom: 10vh;
+}

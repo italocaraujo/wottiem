@@ -1,0 +1,39 @@
+.ph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+.ph img {
+    width: 800px;
+    max-width: 100%;
+    margin: 0 auto;
+    float: none;
+}
+
+.btnLink {
+    text-decoration: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    display: inline-block;
+    border: 1px solid #000;
+    background: transparent;
+    padding: 0;
+    height: 34px;
+    line-height: 33px !important;
+    width: 120px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.btnLink:hover {
+    cursor: pointer;
+    -webkit-transition: .2s ease color, .2s ease;
+    transition: .2s ease color, .2s ease;
+    outline: 0;
+    background-color: #000;
+    color: #fff;
+}

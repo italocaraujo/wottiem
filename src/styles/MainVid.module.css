@@ -1,0 +1,34 @@
+.videoContainer {
+    background-color: #000000; /* Fundo preto só para a área do vídeo */
+    width: 100%;
+    height: auto;
+  }
+  
+  .mainVideo {
+    width: 100%;
+    height: auto;
+    opacity: 0; /* O vídeo começa invisível */
+    background-color: #000000; /* Tela preta no início */
+    
+    /* Animação fade-in suave com um atraso de 2 segundos antes de iniciar */
+    -webkit-animation: fadeIn 3s ease-in-out 2s forwards;
+    animation: fadeIn 3s ease-in-out 1s forwards;
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
