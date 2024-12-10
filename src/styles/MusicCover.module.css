@@ -55,10 +55,10 @@
     transition: .2s ease color, .2s ease;
     outline: 0;
     background-color: #000;
+}
 
-    a {
-        color: #ffffff;
-    }
+.linkListen:hover {
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {
