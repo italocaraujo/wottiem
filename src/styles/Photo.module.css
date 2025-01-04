@@ -7,10 +7,15 @@
 }
 
 .ph img {
-    width: 800px;
+    width: 520px;
     max-width: 100%;
     margin: 0 auto;
     float: none;
+}
+
+.description {
+    padding-top: 15px;
+    font-size: 14px;
 }
 
 .btnLink {

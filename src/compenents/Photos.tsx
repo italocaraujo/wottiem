@@ -15,14 +15,15 @@ const Photos = () => {
 
   const photos = [
     {
-        src: "/assets/photos/phnumber2.jpg",
-        alt: "WOTTIEM 2",
-        link: "https://wottiem.vercel.app/pages/photo.html",
+      src: "/assets/photos/phnumber2.jpg",
+      alt: "WOTTIEM 2",
+      link: "https://wottiem.vercel.app/pages/photo.html",
     },
     {
       src: "/assets/photos/phnumber1.jpg",
       alt: "WOTTIEM 1",
       link: "https://wottiem.vercel.app/pages/photo.html",
+      description: "Caiu shampoo no meu olho, essa bosta tá ardendo.", // Adiciona descrição
     },
   ];
 
@@ -31,6 +32,7 @@ const Photos = () => {
       {photos.map((photo, index) => (
         <div key={index} className={styles.ph}>
           <img src={photo.src} alt={photo.alt} />
+          {photo.description && <p className={styles.description}>"{photo.description}"</p>}
           <div
             id="btn-link"
             className={styles.btnLink}

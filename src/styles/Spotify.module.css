@@ -5,13 +5,19 @@
     align-self: center;
     justify-self: center;
     width: 100%;
-    max-width: 550px; /* Define um tamanho máximo */
+    max-width: 520px; /* Define um tamanho máximo */
 }
 
 #embed-iframe {
     height: 80px;
     border-radius: 8px;
     margin: 40px;
+}
+
+@media (max-width: 768px) {
+    .spotifyEmbed {
+        max-width: 470px; /* Define um tamanho máximo */
+    }
 }
 
 @media (max-width: 480px) {
