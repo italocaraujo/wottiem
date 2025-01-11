@@ -1,0 +1,122 @@
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.listenSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+    color: white;
+    z-index: 1000;
+    animation: slideUp 0.3s ease-in-out;
+}
+
+.listenContent {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-top: 30px;
+}
+
+.listenTitle {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.listenSubtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ouvirLinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ouvirLink {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.ouvirLink:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.biSpotify, .biAppleMusic, .biYoutube, .biInstagram {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.divCloseBtn {
+    position: relative;
+    top: -180;
+    right: -905;
+}
+
+.closeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .listenTitle {
+        font-size: 1.5rem;
+    }
+
+    .listenSubtitle {
+        font-size: 0.9rem;
+    }
+
+    .ouvirLink {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .listenTitle {
+        font-size: 1.2rem;
+    }
+
+    .listenSubtitle {
+        font-size: 0.8rem;
+    }
+
+    .ouvirLinks {
+        gap: 0.5rem;
+    }
+
+    .ouvirLink {
+        padding: 0.5rem;
+        font-size: 0.7rem;
+    }
+}

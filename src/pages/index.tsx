@@ -7,7 +7,6 @@ import Footer from "@/compenents/Footer";
 import MusicCover from "@/compenents/MusicCover";
 import SpotifyFrame from "@/compenents/SpotifyFrame";
 import Clothes from "@/compenents/Clothes";
-import Links from "@/compenents/Links";
 import Clock from "@/compenents/Clock";
 import Photos from "@/compenents/Photos";
 
@@ -35,7 +34,6 @@ export default function Home() {
       </Head>
       <Header />
       <Navbar />
-      <Links />
       <Clock />
       {/* Conteúdo da página */}
       <div className={`${styles.page}`}>
