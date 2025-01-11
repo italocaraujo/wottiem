@@ -70,8 +70,8 @@
 
 .divCloseBtn {
     position: relative;
-    top: -180;
-    right: -905;
+    bottom: 180;
+    left: 905;
 }
 
 .closeBtn {
