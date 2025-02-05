@@ -46,6 +46,7 @@
 
 .ouvirLink {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
@@ -55,21 +56,27 @@
     border-radius: 0.5rem;
     transition: background-color 0.3s ease;
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 .ouvirLink:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.ouvirLink svg {
+    width: 20px;
+    height: 20px;
+}
+
 .biSpotify, .biAppleMusic, .biYoutube, .biInstagram {
     width: 20px;
     height: 20px;
-    margin-top: 2px;
+    margin-top: 0;
 }
 
 .divCloseBtn {
     position: relative;
-    bottom: 190;
+    bottom: 190px;
     left: 47%;
 }
 
@@ -102,7 +109,6 @@
 }
 
 @media (max-width: 480px) {
-
     .listenTitle {
         font-size: 1.2rem;
     }

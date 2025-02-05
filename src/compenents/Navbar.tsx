@@ -76,7 +76,7 @@ const Navbar = () => {
         <div className={styles.right}>
           <a
             className={styles.rightLink}
-            href="https://linktr.ee/KyotoRecords"
+            href="https://www.kyotorecords.com.br"
             target="_blank"
             rel="noopener noreferrer"
           >
