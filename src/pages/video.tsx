@@ -27,7 +27,7 @@ export default function Photo() {
             <Clock />
 
             <div className="main-content">
-                <p>Não a nada para ver aqui. Por enquanto...</p>
+                <p>Não há nada para ver aqui. Por enquanto...</p>
             </div>
 
             {/* <Video /> */}
