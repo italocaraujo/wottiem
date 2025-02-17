@@ -10,11 +10,12 @@
 }
 
 .listenSection {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #151515;
+    background-color: #0e0d0d;
     color: white;
     z-index: 1000;
     animation: slideUp 0.3s ease-in-out;
@@ -48,9 +49,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.3rem;
     padding: 0.75rem 1rem;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(122, 122, 122, 0.102);
     color: white;
     text-decoration: none;
     border-radius: 0.5rem;
@@ -63,9 +64,8 @@
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-.ouvirLink svg {
-    width: 20px;
-    height: 20px;
+.listenLinkIcon {
+    padding-top: 8px;
 }
 
 .biSpotify, .biAppleMusic, .biYoutube, .biInstagram {
@@ -75,9 +75,9 @@
 }
 
 .divCloseBtn {
-    position: relative;
-    bottom: 190px;
-    left: 47%;
+    position: absolute;
+    right: 1%;
+    top: 5%;
 }
 
 .closeBtn {
@@ -90,7 +90,6 @@
     justify-content: center;
     border-radius: 50%;
     transition: background-color 0.3s ease;
-    position: absolute;
 }
 
 @media (max-width: 768px) {
@@ -105,6 +104,10 @@
     .ouvirLink {
         font-size: 0.8rem;
         padding: 0.5rem 0.75rem;
+    }
+
+    .divCloseBtn {
+        right: 2%;
     }
 }
 
@@ -125,4 +128,10 @@
         padding: 0.5rem;
         font-size: 0.7rem;
     }
+
+    .divCloseBtn {
+        right: 3%;
+    }
+
+ 
 }

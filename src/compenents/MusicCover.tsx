@@ -1,20 +1,58 @@
 import styles from "@/styles/MusicCover.module.css";
+import { useState } from "react";
 
-const MusicCover = () => (
+// Array contendo os dados dos álbuns
+const albums = [
+  {
+    title: "?",
+    releaseDate: "2025",
+    imageUrl: "/assets/music/what.png",
+    altText: "?",
+    listenUrl: "https://www.instagram.com/zec4correia/",
+  },
+  // Adicione mais álbuns aqui, se necessário
+];
+
+const MusicCover = () => {
+  // Estado para controlar qual botão foi clicado
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
+
+  // Função para copiar texto para a área de transferência
+  const handleCopy = (text: string, index: number) => {
+    navigator.clipboard.writeText(text).then(() => {
+      setCopiedIndex(index); // Define o índice do botão clicado
+      setTimeout(() => {
+        setCopiedIndex(null); // Reseta a mensagem depois de 2 segundos
+      }, 2000);
+    });
+  };
+
+  return (
     <section className={styles.musicsCover}>
-        <div className={styles.albumParasita}>
-            <a href="https://youtube.com/playlist?list=PLFWypV3Onhh5HNVEm_8Syq-y9qXjXAuna&si=N2QR4fRdOzA9UBAA" target="_blank">
-                <img className={styles.imgMusicsLinks} src="/assets/music/parasita.jpg" alt="Parasita" />
-            </a>
-            <div className={styles.infContent}>
-                <h1 className={styles.titleAlbum}>PARASITA</h1>
-                <p className={styles.descAlbumDate}>Released October 16, 2023</p>
-                <div className={styles.btnLinkMusic}>
-                <a className={styles.linkListen} href="https://youtube.com/playlist?list=PLFWypV3Onhh5HNVEm_8Syq-y9qXjXAuna&si=N2QR4fRdOzA9UBAA" target="_blank">Ouvir</a>
+      {albums.map((album, index) => (
+        <div key={index} className={styles.albumParasita}>
+          <a href={album.listenUrl} target="_blank" rel="noopener noreferrer">
+            <img
+              className={styles.imgMusicsLinks}
+              src={album.imageUrl}
+              alt={album.altText}
+            />
+          </a>
+          <div className={styles.infContent}>
+            <h1 className={styles.titleAlbum}>{album.title}</h1>
+            <p className={styles.descAlbumDate}>{album.releaseDate}</p>
+            <div
+              id="btn-link"
+              className={styles.btnLinkMusic}
+              onClick={() => handleCopy("2025", index)}
+            >
+              {copiedIndex === index ? "Ainda não!" : "Ouvir"}
             </div>
           </div>
         </div>
+      ))}
     </section>
-);
+  );
+};
 
 export default MusicCover;

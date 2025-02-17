@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import styles from "@/styles/Navbar.module.css";
-import ListenSection from "@/compenents/ListenSection";
 import OuvirSection from "@/compenents/ListenSection";
 
 const Navbar = () => {
@@ -33,6 +32,20 @@ const Navbar = () => {
     setIsListenVisible((prev) => !prev);
   };
 
+  // Função para lidar com cliques nos links
+  const handleNavLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    const currentPath = router.pathname;
+    const targetPath = new URL(href, window.location.origin).pathname;
+
+    // Se o link for para a mesma página, previne o comportamento padrão
+    if (currentPath === targetPath) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <>
       <div
@@ -49,10 +62,39 @@ const Navbar = () => {
         </div>
 
         <div className={`${styles.center} ${menuOpen ? styles.active : ""}`}>
-          <a href={getDynamicLink("/#all")}>ALL</a>
-          <a href="/photo">PHOTO</a>
-          <a href="/video">VIDEO</a>
-          <a href="/audio">AUDIO</a>
+          {/* Links centrais */}
+          <a
+            href={getDynamicLink("/#all")}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => handleNavLinkClick(e, getDynamicLink("/#all"))}
+          >
+            TUDO
+          </a>
+          <a
+            href="/photo"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => handleNavLinkClick(e, "/photo")}
+          >
+            FOTO
+          </a>
+          <a
+            href="/video"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => handleNavLinkClick(e, "/video")}
+          >
+            VÍDEO
+          </a>
+          <a
+            href="/audio"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => handleNavLinkClick(e, "/audio")}
+          >
+            ÁUDIO
+          </a>
         </div>
 
         <div className={styles.hamburger} onClick={toggleMenu}>
@@ -74,13 +116,15 @@ const Navbar = () => {
         </div>
 
         <div className={styles.right}>
+          {/* Link "SOBRE" com target="_blank" */}
           <a
             className={styles.rightLink}
-            href="https://www.kyotorecords.com.br"
+            href="/about"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => handleNavLinkClick(e, "/about")}
           >
-            KYOTO
+            SOBRE
           </a>
         </div>
 
@@ -114,10 +158,39 @@ const Navbar = () => {
                   </svg>
                 </span>
               </div>
-              <a href={getDynamicLink("/#all")}>ALL</a>
-              <a href="/photo">PHOTO</a>
-              <a href="/video">VIDEO</a>
-              <a href="/audio">AUDIO</a>
+              {/* Links na sidebar */}
+              <a
+                href={getDynamicLink("/#all")}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => handleNavLinkClick(e, getDynamicLink("/#all"))}
+              >
+                TUDO
+              </a>
+              <a
+                href="/photo"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => handleNavLinkClick(e, "/photo")}
+              >
+                FOTO
+              </a>
+              <a
+                href="/video"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => handleNavLinkClick(e, "/video")}
+              >
+                VÍDEO
+              </a>
+              <a
+                href="/audio"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => handleNavLinkClick(e, "/audio")}
+              >
+                ÁUDIO
+              </a>
             </div>
           </>
         )}

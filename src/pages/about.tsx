@@ -9,6 +9,7 @@ import SpotifyFrame from "@/compenents/SpotifyFrame";
 import Clothes from "@/compenents/Clothes";
 import Clock from "@/compenents/Clock";
 import Photos from "@/compenents/Photos";
+import AboutText from "@/compenents/AboutText";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ZECA</title>
+        <title>SOBRE | ZECA</title>
         <meta name="description" content="ZECA CORREIA" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link
@@ -32,18 +33,13 @@ export default function Home() {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
-      <Header />
       <Navbar />
       <Clock />
       {/* Conteúdo da página */}
       <div className={`${styles.page}`}>
 
         <main className={styles.main}>
-          
-          {/* <Clothes /> */}
-          <MusicCover />
-          <Photos />
-          <SpotifyFrame />
+          <AboutText />
         </main>
 
         <Footer />

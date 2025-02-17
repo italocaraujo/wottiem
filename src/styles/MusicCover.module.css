@@ -55,6 +55,7 @@
     transition: .2s ease color, .2s ease;
     outline: 0;
     background-color: #000;
+    color: #ffffff;
 }
 
 .linkListen:hover {
