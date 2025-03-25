@@ -65,7 +65,7 @@ const Navbar = () => {
           {/* Links centrais */}
           <a
             href={getDynamicLink("/#all")}
-            target="_blank"
+             
             rel="noopener noreferrer"
             onClick={(e) => handleNavLinkClick(e, getDynamicLink("/#all"))}
           >
@@ -73,7 +73,7 @@ const Navbar = () => {
           </a>
           <a
             href="/photo"
-            target="_blank"
+             
             rel="noopener noreferrer"
             onClick={(e) => handleNavLinkClick(e, "/photo")}
           >
@@ -81,7 +81,7 @@ const Navbar = () => {
           </a>
           <a
             href="/video"
-            target="_blank"
+             
             rel="noopener noreferrer"
             onClick={(e) => handleNavLinkClick(e, "/video")}
           >
@@ -89,7 +89,7 @@ const Navbar = () => {
           </a>
           <a
             href="/audio"
-            target="_blank"
+             
             rel="noopener noreferrer"
             onClick={(e) => handleNavLinkClick(e, "/audio")}
           >
@@ -116,11 +116,11 @@ const Navbar = () => {
         </div>
 
         <div className={styles.right}>
-          {/* Link "SOBRE" com target="_blank" */}
+          {/* Link "SOBRE" com   */}
           <a
             className={styles.rightLink}
             href="/about"
-            target="_blank"
+             
             rel="noopener noreferrer"
             onClick={(e) => handleNavLinkClick(e, "/about")}
           >
@@ -161,7 +161,7 @@ const Navbar = () => {
               {/* Links na sidebar */}
               <a
                 href={getDynamicLink("/#all")}
-                target="_blank"
+                 
                 rel="noopener noreferrer"
                 onClick={(e) => handleNavLinkClick(e, getDynamicLink("/#all"))}
               >
@@ -169,7 +169,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/photo"
-                target="_blank"
+                 
                 rel="noopener noreferrer"
                 onClick={(e) => handleNavLinkClick(e, "/photo")}
               >
@@ -177,7 +177,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/video"
-                target="_blank"
+                 
                 rel="noopener noreferrer"
                 onClick={(e) => handleNavLinkClick(e, "/video")}
               >
@@ -185,7 +185,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/audio"
-                target="_blank"
+                 
                 rel="noopener noreferrer"
                 onClick={(e) => handleNavLinkClick(e, "/audio")}
               >

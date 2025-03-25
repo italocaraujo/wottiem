@@ -31,7 +31,7 @@ const MusicCover = () => {
     <section className={styles.musicsCover}>
       {albums.map((album, index) => (
         <div key={index} className={styles.albumParasita}>
-          <a href={album.listenUrl} target="_blank" rel="noopener noreferrer">
+          <a href={album.listenUrl}   rel="noopener noreferrer">
             <img
               className={styles.imgMusicsLinks}
               src={album.imageUrl}
