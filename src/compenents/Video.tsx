@@ -15,16 +15,8 @@ const Video = () => {
 
   const videos = [
     {
-        src: "https://www.youtube.com/embed/onrYIcCrokA?si=XqMhIV-P73K2Vo3Y",
-        link: "https://www.youtube.com/watch?v=onrYIcCrokA",
-    },
-    {
-      src: "https://www.youtube.com/embed/JlSjYk8AJqY?si=lMWIrzFErQDfUKeM",
-      link: "https://www.youtube.com/watch?v=JlSjYk8AJqY",
-    },
-    {
-      src: "https://www.youtube.com/embed/TxX9ZMVu6us?si=AzUo586CT4lmhnSB",
-      link: "https://www.youtube.com/watch?v=TxX9ZMVu6us",
+        src: "https://www.youtube.com/embed/8L9MEuahScA?si=lFEjc2R5t0A6OnAw",
+        link: "https://www.youtube.com/watch?v=8L9MEuahScA",
     },
   ];
 

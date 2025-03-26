@@ -26,11 +26,7 @@ export default function Photo() {
             <Navbar />
             <Clock />
 
-            <div className="main-content">
-                <p>Não há nada para ver aqui. Por enquanto...</p>
-            </div>
-
-            {/* <Video /> */}
+            <Video />
 
             <Footer />
         </>

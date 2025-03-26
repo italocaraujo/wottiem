@@ -9,6 +9,7 @@ import SpotifyFrame from "@/compenents/SpotifyFrame";
 import Clothes from "@/compenents/Clothes";
 import Clock from "@/compenents/Clock";
 import Photos from "@/compenents/Photos";
+import Video from "@/compenents/Video";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -40,6 +41,7 @@ export default function Home() {
 
         <main className={styles.main}>
           
+          <Video />
           {/* <Clothes /> */}
           <MusicCover />
           <Photos />
